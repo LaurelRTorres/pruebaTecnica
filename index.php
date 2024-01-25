@@ -128,17 +128,17 @@
             <img src="imagenes/impre01.png" alt="">
         </div>
         <div class="col-sm-6 formulario">
-            <form action="#" method="post">
+            <form action="registro.php" method="post">
                 <label for="nombre">Nombres</label><br>
-                <input class="inputRegistro" type="text" required><br>
+                <input class="inputRegistro" name="Nombre" type="text" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Ingresar solo letras y espacios" required><br>
                 <label for="apellidos">Apellidos</label><br>
-                <input class="inputRegistro" type="text" required><br>
+                <input class="inputRegistro" name="Apellido" type="text" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Ingresar solo letras y espacios" required><br>
                 <label for="Correo">Correo electronico</label><br>
-                <input class="inputRegistro" type="email" required><br>
+                <input class="inputRegistro" name="Correo" type="email" required><br>
                 <label for="contraseña">Contraseña</label><br>
-                <input class="inputRegistro" type="password" required><br>
+                <input class="inputRegistro" name="Contraseña" type="password" id="Contraseña" required><br>
                 <label for="ConfirmarContraseña">Confirmar contraseña</label><br>
-                <input class="inputRegistro" type="password" required><br>
+                <input class="inputRegistro" name="CContraseña" type="password" id="ConfirmarContra" required><br>
                 <input type="checkbox" id="Terminos">
                 <label for="terminos">Acepto <span>Terminos y condiciones</span></label><br>
                 <input type="checkbox" id="Politicas">
@@ -151,13 +151,33 @@
         <div class="popup-contenido">
           <span class="cerrar" onclick="cerrarPopup()">&times;</span>
           <h2>Inicie sesion en su cuenta</h2>
-          <form action="#" method="post">
-            <input class="input" type="text" id="nombre" name="nombre" placeholder="Correo Electronico" required><br>
-            <input class="input" type="password" id="email" name="email" placeholder="Contraseña" required><br>
-            <button class="boton" type="submit">Enviar</button>
+          <form method="post">
+            <input class="input" type="text" id="nombre" name="Correo" placeholder="Correo Electronico" required><br>
+            <input class="input" type="password" id="email" name="Contraseña" placeholder="Contraseña" required><br>
+            <button class="boton" onclick="IniciarSesion()" type="submit">Enviar</button>
           </form>
         </div>
       </div>
       <script src="main.js"></script>
+      <script>
+        function IniciarSesion(){
+            var Correo = document.getElementById("Correo").value;
+            var Contra = document.getElementById("Contra").value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "iniciar.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    var RespuestaIniciar = JSON.parse(xhr.responseText);
+                    if(RespuestaIniciar.autenticado){
+                        document.getElementById("NombreUsuario").innerText = RespuestaIniciar.NombreUsuario;
+                    } else{
+                        alert("Hubo un error en la autentificacion.")
+                    }
+                }
+            };
+            xhr.send("Correo" + Correo + "&Contra" + Contra)
+        }
+    </script>
 </body>
 </html>
