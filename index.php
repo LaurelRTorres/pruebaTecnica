@@ -158,6 +158,70 @@
           </form>
         </div>
       </div>
+    
+      <footer>
+        <div class="row">
+            <div class="col-sm-2">
+                <h2>Contactanos</h2>
+                <p class="gray">E-mail: <a href="mailto:comercial@qvision.us">comercial@qvision.us</a></p>
+                <p class="gray">WhatsApp: +300 255 05 65 </p>
+                <p>Comunicate con nosotros</p>
+            </div>
+            <div class="col-sm-2">
+                <h2>Categorias <br> de Cursos</h2>
+                <p>Desarrollo</p>
+                <p>Metodologia de pruebas</p>
+                <p>Pruebas funcionales</p>
+                <p>Pruebas no funcionales</p>
+                <p>DevOps</p>
+                <p>Cloud</p>
+                <p>Automatizacion</p>
+            </div>
+            <div class="col-sm-2">
+                <h2>Certificaciones</h2>
+                <p>Scrum Master</p>
+                <p>Scrum Product Owner</p>
+                <p>Scrum Developer</p>
+                <p>Agile Coach</p>
+                <p>Design Thinking</p>
+                <p>Kanban</p>
+                <p>OKR</p>
+                <p>DevOps</p>
+            </div>
+            <div class="col-sm-2">
+                <h2>Q-Vision <br> Technologies</h2>
+                <p>Desarrollo de Software</p>
+                <p>Aseguramiento de calidad</p>
+                <p>Automatizacion de <br> Procesos con RPA</p>
+                <P>Talento TI</P>
+                <p>Gestion Inteligente <br> de Datos</p>
+            </div>
+            <div class="col-sm-2">
+                <h2>Soporte</h2>
+                <p class="gray">Si tienes consultas o dudas,</p> 
+                <p class="gray"> contactanos al correo: </p> 
+                <p> <a href="mailto:izyacademy@qvision.us">izyacademy@qvision.us</a> </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="imagenes/Logo izyacademy transparente2022.png" alt="">
+            </div>
+            <div class="col-sm-4">
+                <p>Terminos y condiciones - Politica Tratamiento de Datos</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://web.facebook.com/izyacademybk?_rdc=1&_rdr"><i class="fa fa-facebook" style="font-size:24px"></i></a> 
+                <a href="https://twitter.com/izy_academy?lang=es"><i class="fa fa-twitter" style="font-size:24px"></i></a> 
+                <a href="https://www.instagram.com/izy_academy/"><i class="fa fa-instagram" style="font-size:24px"></i></a> 
+                <a href="https://co.linkedin.com/company/izy-academy"><i class="fa fa-linkedin" style="font-size:24px;"></i></a> 
+            </div>
+        </div>
+        <div class="row footer">
+            <p class="Copyright">Copyright &copy; 2023 IzyAcademy Marca Registrada By Qvision Technologies</p>
+        </div>
+    </footer>
       <script src="main.js"></script>
       <script>
         function IniciarSesion(){
